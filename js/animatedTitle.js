@@ -1,6 +1,6 @@
 const spnText = document.querySelector('.text');
 const spnCursor = document.querySelector('.cursor');
-const txt = [`Full stack developer`, `I can create awesome apps for your business`, `Let's work together!`];
+const txt = [`Full stack developer`, `I can create awesome apps`, `for your business`, `Let's work together!`];
 
 let activeLetter = -3;
 let activeText = 0;
