@@ -9,7 +9,7 @@ let indexText = 0;
 const time = 40;
 
 
-// Implementacja
+//Implemenation of writing effect 
 const addLetter = () => {
     if (activeLetter >= 0) {
         spnText.textContent += txt[activeText][activeLetter];

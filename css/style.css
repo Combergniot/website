@@ -14,8 +14,7 @@ font-family: 'Roboto', sans-serif;; */
   font-style: normal;
   font-family: "codropsicons";
   src: url("../fonts/codropsicons/codropsicons.eot");
-  src: url("../fonts/codropsicons/codropsicons.eot?#iefix")
-      format("embedded-opentype"),
+  src: url("../fonts/codropsicons/codropsicons.eot?#iefix") format("embedded-opentype"),
     url("../fonts/codropsicons/codropsicons.woff") format("woff"),
     url("../fonts/codropsicons/codropsicons.ttf") format("truetype"),
     url("../fonts/codropsicons/codropsicons.svg#codropsicons") format("svg");
@@ -27,10 +26,15 @@ font-family: 'Roboto', sans-serif;; */
   box-sizing: border-box;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 div.wrap {
   max-width: 1920px;
   margin: 0 auto;
   min-height: 300vh;
+
 }
 
 button {
@@ -45,7 +49,7 @@ nav {
   width: 100%;
   height: 92px;
   background-color: transparent;
-  z-index: 1;
+  z-index: 2;
   transition: 0.5s;
 }
 
@@ -227,6 +231,7 @@ button.arrow {
   transition: 0.3s;
   /* box-shadow: 0 0 0 2px var(--button-color), 0 0 0 2px var(--button-color); */
   border: 2px dotted #5a5a5a;
+  display: none
 }
 
 button.arrow:hover {
@@ -264,17 +269,23 @@ section.about {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 60px 30px;
-  height: 60vh;
+  padding: 90px 30px;
+  min-height: 60vh;
   color: rgb(90, 90, 90);
 }
 
-section .description {
+section.about .description {
   display: flex;
   flex-direction: column;
   width: 50%;
   height: 100%;
   font-family: "Montserrat", sans-serif;
+  transform: translateY(-100vh);
+  transition: 1s;
+}
+
+section.about .description.active {
+  transform: translateY(0);
 }
 
 h2,
@@ -295,18 +306,24 @@ section .description p {
   margin-bottom: 30px;
 }
 
-section .photo {
+section.about .photo {
   background: url(../img/myphoto.jpg) no-repeat center center;
   justify-content: flex-start;
   height: 350px;
   width: 450px;
   box-shadow: 0 0 8px 2px rgb(90, 90, 90);
+  transform: translateX(100vw);
+  transition: .7s;
+}
+
+section.about .photo.active {
+  transform: translateX(0);
 }
 
 /* Skills  */
 
 section.skills {
-  height: 45vh;
+  height: 60vh;
   width: 100%;
   background-image: url(../img/computer-1245714_1920.jpg);
   background-attachment: fixed;
@@ -336,12 +353,14 @@ section.skills .icon-container {
 
 section.skills h3 {
   text-align: center;
+  margin-bottom: 20px;
 }
 
 section.skills p {
   font-family: "Roboto", "sans-serif";
   padding: 10px;
-  text-align: center;
+  /* text-align: center; */
+  transition: 0.3s;
 }
 
 section.skills div.icon-circle {
@@ -357,9 +376,13 @@ section.skills div.icon-circle {
 }
 
 section.skills div.icon-circle:hover {
-  box-shadow: 0 0 20px 2px var(--button-color);
+  box-shadow: 0 0px 20px 4px var(--button-color);
   color: var(--button-color);
 }
+
+/* section.skills div.icon-circle:hover ~ p {
+  color: var(--button-color);
+} */
 
 section.skills div.icon-circle i {
   font-size: 60px;
@@ -374,19 +397,26 @@ section.works {
 section.works .works-description {
   width: 100%;
   text-align: center;
-  margin-top: 30px;
+  padding-top: 80px;
   color: rgb(90, 90, 90);
+  transform: translateX(-100vw);
+  transition: 1s;
 }
 
 section.works p.line {
   width: 20%;
-  margin: 20px auto 30px auto;
+  margin: 20px auto 50px auto;
+}
+
+section.works .works-description.active {
+  transform: translateX(0);
 }
 
 section.works .portfolio {
   display: flex;
   flex-basis: 30%;
   justify-content: space-around;
+  padding-bottom: 80px;
 }
 
 section.works .link-portfolio {
@@ -395,10 +425,69 @@ section.works .link-portfolio {
 }
 
 section.works .item-portfolio {
+  position: relative;
   width: 352px;
   height: 352px;
   border: 3px solid rgb(90, 90, 90);
-  background-color: beige;
+  overflow: hidden;
+}
+
+section.works .item-portfolio img {
+  max-width: 352px;
+  /* max-height: 352px; */
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+section.works .preview-container {
+  position: absolute;
+  top: 50%;
+  left: -50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-in-out;
+}
+
+section.works span.preview {
+  display: block;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80px;
+  width: 80px;
+  background-color: rgba(198, 156, 109, 0.7);
+  border-radius: 50%;
+  border: 6px solid rgba(198, 156, 109, 0.4);
+  transition: 0.2s;
+}
+
+section.works .preview i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 26px;
+  color: white;
+  transition: 0.2s;
+}
+
+section.works .item-portfolio:hover .preview-container {
+  left: 50%;
+}
+
+section.works span.preview:hover {
+  background-color: rgba(198, 156, 109, 1);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+section.works span.preview:hover i {
+  font-size: 35px;
 }
 
 /* Contact
@@ -424,6 +513,12 @@ section.contact .contact-description {
   width: 100%;
   text-align: center;
   padding: 80px 0;
+  transform: translateX(-100vw);
+  transition: 1s;
+}
+
+section.contact .contact-description.active {
+  transform: translateX(0);
 }
 
 .contact-description .info {
@@ -507,7 +602,7 @@ button.confirmBtn:hover {
 /* Footer */
 
 footer {
-  height: 30vh;
+  height: 25vh;
   background-color: rgb(29, 28, 32);
 }
 
@@ -544,4 +639,56 @@ footer a {
 
 footer a:hover {
   color: var(--button-color);
+}
+
+a.hidden {
+  display: none;
+}
+
+/* Button */
+
+button.back {
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(198, 156, 109, 0.4);
+  color: white;
+  border: none;
+  transition: 0.3s;
+  overflow: hidden;
+  border: none;
+}
+
+button.back a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: white;
+}
+
+button.back a i {
+  position: relative;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+button.back:hover {
+  background-color: rgba(198, 156, 109, 1);
+}
+
+button.back:hover i {
+  animation: back 0.7s linear infinite;
+  animation-duration: 0.7s;
+}
+
+@keyframes back {
+  100% {
+    transform: translateY(40px);
+  }
 }

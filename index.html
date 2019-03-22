@@ -2,221 +2,347 @@
 <html lang="en" class="no-js">
 
 <head>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Marcin Wernerowicz | Web Developer</title>
-	<meta name="description" content="Full-stack java Developer" />
-	<meta name="keywords" content="Java" />
-	<meta name="author" content="Marcin Wernerowicz" />
-	<!-- <link rel="shortcut icon" href="../favicon.ico"> -->
-	<link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald|Roboto|Raleway&amp;subset=latin-ext" rel="stylesheet">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
-	 crossorigin="anonymous">
-
-	<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Marcin Wernerowicz | Web Developer</title>
+  <meta name="description" content="Full-stack Java Developer" />
+  <meta name="keywords" content="Java" />
+  <meta name="author" content="Marcin Wernerowicz" />
+  <link rel="shortcut icon" href="https://img.icons8.com/plasticine/64/000000/workflow.png">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald|Roboto|Raleway&amp;subset=latin-ext" rel="stylesheet" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+    crossorigin="anonymous" />
+  <link href="lib/lighbox/dist/css/lightbox.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
-	<div class="wrap">
-		<div id="large-header" class="large-header">
-			<canvas id="canvas"></canvas>
+  <div class="wrap">
+    <div id="large-header" class="large-header">
+      <canvas id="canvas"></canvas>
 
-			<header>
-				<div class="invitation">
-					<div class="welcome">
-						<p>Hello! I'M</p>
-						<h1 class="name">Marcin Wernerowicz</h1>
-						<p class="line"></p>
-						<p class="title"> <span class="text"></span><span class="cursor">|</span></p>
-					</div>
-				</div>
-			</header>
-			<div class="button-container">
-				<button>Hire now!</button>
-				<button>View Works</button>
-			</div>
-			<!-- <div class="scroll"></div> -->
-			<button class="arrow">
-				<i class="fas fa-angle-down"></i>
-			</button>
-		</div>
+      <header>
+        <div class="invitation">
+          <div class="welcome">
+            <p>Hello! I'M</p>
+            <h1 class="name">Marcin Wernerowicz</h1>
+            <p class="line"></p>
+            <p class="title">
+              <span class="text"></span><span class="cursor">|</span>
+            </p>
+          </div>
+        </div>
+      </header>
+      <div class="button-container">
+        <button>Hire now!</button>
+        <button>View Works</button>
+      </div>
+      <!-- <div class="scroll"></div> -->
+      <button onclick="window.location.href='#about'" class="arrow">
+        <i class="fas fa-angle-down"></i>
+      </button>
+    </div>
 
+    <nav>
+      <!-- <div class="logo"></div> -->
+      <li class="dropdown language-selector">
+        <ul class="dropdown-menu ">
+          <li>
+            <a href="#">
+                <img src="img/poland-flag-32.png" />
+                <span>Polish</span>
+              </a>
+          </li>
+          <li class="active">
+            <a href="#">
+                <img src="img/united-kingdom-32.png" />
+                <span>English</span>
+              </a>
+          </li>
+        </ul>
+      </li>
+      <ul>
+        <li><a href="#about">about me</a></li>
+        <li><a href="#skills">skills</a></li>
+        <li><a href="#works">works</a></li>
+        <li><a href="#contact">contact</a></li>
+      </ul>
+    </nav>
 
-		<nav>
-			<!-- <div class="logo"></div> -->
-			<li class="dropdown language-selector">
-				<ul class="dropdown-menu ">
-					<li>
-						<a href="#">
-							  <img src="img/poland-flag-32.png" />
-							  <span>Polish</span>
-							</a>
-					</li>
-					<li class="active">
-						<a href="#">
-							  <img src="img/united-kingdom-32.png" />
-							  <span>English</span>
-							</a>
-					</li>
-				</ul>
-			</li>
-			<ul>
-				<li><a href="#">about me</a></li>
-				<li><a href="#">skills</a></li>
-				<li><a href="#">works</a></li>
-				<li><a href="#">contact</a></li>
-			</ul>
-		</nav>
+    <section class="about" id="about">
+      <div class="description">
+        <h2>Hi everyone! :)</h2>
+        <p class="line"></p>
+        <p>
+          I'm a developer, so I know how to create your app to run across devices using the latest avalaible
+          technologies. I translate ideas into code. I will make that your application works as it should.
+        </p>
+        <p>
+          I'm analytics, experienced in market research area and science research. I know how to find an answers to
+          questions hidden in large data sets. I obtain, process and visualize data.
+        </p>
+        <p>
+          I'm lively, creative person about extrovert personality. I believe in human ability to solve problems.
+        </p>
+      </div>
+      <div class="photo"></div>
+    </section>
+    <section class="skills" id="skills">
+      <div class="contrast">
 
-		<section class="about">
-			<div class="description">
-				<h2>I'm dynamic and creative</h2>
-				<p class="line"></p>
-				<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident sequi, quibusdam, asperiores tempora
-					debitis
-					dicta nostrum, architecto voluptatum quo consequuntur quam totam cum. Culpa distinctio, ipsa animi saepe sunt
-					tenetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, adipisci voluptatibus quam doloribus
-					tempora facilis voluptate ea cum fuga eligendi qui magni amet vitae, veniam nihil! Maiores repudiandae aliquam
-					veritatis!</p>
-				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae, quasi in! Commodi esse aperiam
-					veritatis
-					temporibus, id sint, enim necessitatibus hic consequuntur vel quam laborum voluptatibus eligendi ratione, in
-					corrupti.</p>
+        <div class="item">
+          <div class="icon-container">
+            <div class="icon-circle">
+              <i class="fab fa-java"></i>
+            </div>
+            <h3>Backend</h3>
 
-			</div>
-			<div class="photo">
-			</div>
-		</section>
-		<section class="skills">
-			<div class="contrast">
-				<div class="item">
-					<div class="icon-container">
-						<div class="icon-circle">
-							<i class="fab fa-java"></i>
-						</div>
-						<h3>Backend</h3>
-						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.!</p>
-					</div>
-				</div>
-				<div class="item">
-					<div class="icon-container">
-						<div class="icon-circle">
-							<i class="fab fa-react"></i>
-						</div>
-						<h3>Frontend</h3>
-						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.!</p>
-					</div>
-				</div>
-				<div class="item">
-					<div class="icon-container">
-						<div class="icon-circle">
-							<!-- <i class="fas fa-chart-bar"></i> -->
-							<i class="fas fa-database"></i>
-						</div>
-						<h3>Analitics</h3>
-						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.!</p>
-					</div>
-				</div>
+            <p>Java <span><i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i></span></p>
+            <p>Spring Framework <span><i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+			<i class="far fa-star"></i></span></p>
+            <p>Hibernate <span><i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+			<i class="far fa-star"></i></span></p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="icon-container">
+            <div class="icon-circle">
+              <i class="fab fa-react"></i>
+            </div>
+            <h3>Frontend</h3>
 
-			</div>
-		</section>
-		<section class="works">
-			<div class="works-description">
-				<h2>My works</h2>
-				<p class="line"></p>
-			</div>
-			<div class="portfolio">
-				<a href="#" class="link-portfolio">
-				<div class="item-portfolio">
-					<div class="preview-container">
-						<div class="button-preview">
-							<i class="fas fa-search"></i>
-						</div>
-					</div>
-					<img src="" alt="screenshot">
-				</div>
-				</a>
-				<a href="#" class="link-portfolio">
-					<div class="item-portfolio">
-						<div class="preview-container">
-							<div class="button-preview">
-								<i class="fas fa-search"></i>
-							</div>
-						</div>
-						<img src="" alt="screenshot">
-					</div>
-				</a>
-				<a href="#" class="link-portfolio">
-						<div class="item-portfolio">
-							<div class="preview-container">
-								<div class="button-preview">
-									<i class="fas fa-search"></i>
-								</div>
-							</div>
-							<img src="" alt="screenshot">
-						</div>
-					</a>
-
-
-			</div>
-
-
-
-		</section>
-		<section class="contact">
-			<div class="contact-container">
-				<div class="contact-description">
-					<h2>Contact with me</h2>
-					<p class="line"></p>
-					<p class="info">Write to me a message</p>
-				</div>
-				<div class="form-container">
-					<form action="">
-						<div class="input-container">
-							<input type="text" placeholder="Your name">
-							<input type="text" placeholder="Your email">
-							<input type="text" placeholder="Your website">
-						</div>
-						<textarea placeholder="Your message"></textarea>
-						<button class="confirmBtn" type="submit">Send message</button>
-					</form>
-				</div>
-
-			</div>
+            <p>JavaScript <span><i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+			<i class="far fa-star"></i></span></p>
+            <p>React <span><i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="far fa-star"></i>
+			<i class="far fa-star"></i></span></p>
+            <p>HTML5/CSS3 <span><i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+			<i class="fas fa-star-half-alt"></i></span></p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="icon-container">
+            <div class="icon-circle">
+              <!-- <i class="fas fa-chart-bar"></i> -->
+              <i class="fas fa-database"></i>
+            </div>
+            <h3>Analitics</h3>
+            <p>SQL <span><i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+			<i class="fas fa-star-half-alt"></i></p>
+			<p>NoSQL <span><i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="far fa-star"></i>
+				<i class="far fa-star"></i>
+			<i class="far fa-star"></i></p>
+			<p>R  <span><i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="far fa-star"></i>
+				<i class="far fa-star"></i>
+      <i class="far fa-star"></i></p>
+      <!-- <p>SPSS Statistics <span><i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+			<i class="far fa-star"></i></p> -->
 
 
-		</section>
-		<footer>
-			<h2>Marcin Wernerowicz</h2>
-			<p class="line"></p>
-			<div class="social">
-				<div class="icon-social">
-					<a href="http://https://www.linkedin.com/in/marcin-wernerowicz-99449114b/">
-						<i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </section>
 
-				</div>
-				<div class="icon-social">
-					<a href="http://https://www.facebook.com/marcin.wernerowicz.1">	<i class="fab fa-facebook"></i></a>
+      <section class="works" id="works">
+        <div class="works-description" >
+          <h2>My works</h2>
+          <p class="line"></p>
+        </div>
 
-				</div>
-				<div class="icon-social">
-					<a href="http://https://github.com/Combergniot">	<i class="fab fa-github"></i></a>
+        <div class="portfolio">
+          <a
+            data-lightbox="screen1"
+            href="img/screeny/panas4.png"
+            class="link-portfolio"
+            data-title="APP...."
+          >
+            <div class="item-portfolio">
+              <div class="preview-container">
+                <span class="preview">
+                  <i class="fas fa-search"></i>
+                </span>
+          </div>
+          <img src="img/screeny/panas4.png" alt="screenshot" />
+        </div>
+        </a>
+        </a>
+        <a
+data-lightbox="screen1"
+href="img/screeny/panas.png"
+class="hidden"
+data-title="APP...."
+></a>
+        <a
+data-lightbox="screen1"
+href="img/screeny/panas3.png"
+class="hidden"
+data-title="APP...."
+></a>
 
-				</div>
-			</div>
-		</footer>
-	</div>
+        <a
+            data-lightbox="screen2"
+            href="img/screeny/copernicana2.png"
+            class="link-portfolio"
+            data-title="APP...."
+          >
+            <div class="item-portfolio">
+              <div class="preview-container">
+                <span class="preview">
+                  <i class="fas fa-search"></i>
+                </span>
+              </div>
+              <img src="img/screeny/copernicana2.png" alt="screenshot" />
+            </div>
+		  </a>
 
+        <a
+            data-lightbox="screen2"
+            href="img/screeny/copernicana3.png"
+            class="hidden"
+            data-title="APP...."
+          ></a>
+        <a
+            data-lightbox="screen2"
+            href="img/screeny/copernicana4.png"
+            class="hidden"
+            data-title="APP...."
+		  ></a>
 
+        <a
+		  data-lightbox="screen3"
+		  href="img/screeny/scrapper4.png"
+		  class="link-portfolio"
+		  data-title="APP....">
+            <div class="item-portfolio">
+              <div class="preview-container">
+                <span class="preview">
+                  <i class="fas fa-search"></i>
+                </span>
+              </div>
+              <img src="img/screeny/scrapper4.png" alt="screenshot" />
+            </div>
+		  </a>
 
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-	<script src="js/animatedTitle.js"></script>
-	<script src="js/TweenLite.min.js"></script>
-	<script src="js/EasePack.min.js"></script>
-	<script src="js/rAF.js"></script>
-	<script src="js/animation.js"></script>
-	<script src="js/scrollMenu.js"></script>
+        <a
+            data-lightbox="screen3"
+            href="img/screeny/scrapper.png"
+            class="hidden"
+            data-title="APP...."
+          ></a>
+        <a
+            data-lightbox="screen3"
+            href="img/screeny/scrapper3.png"
+            class="hidden"
+            data-title="APP...."
+          ></a>
+        <a
+            data-lightbox="screen3"
+            href="img/screeny/scrapper2.png"
+            class="hidden"
+            data-title="APP...."
+          ></a>
+      </div>
+
+    </section>
+    <section class="contact" id="contact">
+      <div class="contact-container">
+        <div class="contact-description">
+          <h2>Contact with me</h2>
+          <p class="line"></p>
+          <!-- <p class="info">Write to me a message</p> -->
+          <p class="info">If you have a project that you want to get started, you think need my help with something or
+            just do you fancy saying hey </p>
+          <p class="info">feel free to contact me</p>
+        </div>
+        <div class="form-container">
+          <form action="https://formspree.io/marcin.wernerowicz@gmail.com" method="POST">
+            <div class="input-container">
+              <input type="text" name="name" placeholder="Your name" />
+              <input type="email" name="email" placeholder="Your email" />
+              <input type="text" name="website" placeholder="Your website" />
+            </div>
+            <textarea name="message" placeholder="Your message"></textarea>
+            <button class="confirmBtn" type="submit">Send message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <h2>Marcin Wernerowicz</h2>
+      <p class="line"></p>
+      <div class="social">
+        <div class="icon-social">
+          <a
+              href="http://https://www.linkedin.com/in/marcin-wernerowicz-99449114b/"
+            >
+              <i class="fab fa-linkedin"></i
+            ></a>
+        </div>
+        <div class="icon-social">
+          <a href="http://https://www.facebook.com/marcin.wernerowicz.1">
+              <i class="fab fa-facebook"></i
+            ></a>
+        </div>
+        <div class="icon-social">
+          <a href="http://https://github.com/Combergniot">
+              <i class="fab fa-github"></i
+            ></a>
+        </div>
+      </div>
+    </footer>
+
+    <button class="back">
+      <a href="#top" class="smooth-scroll">
+          <i class="fas fa-angle-up"></i>
+        </a>
+    </button>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="js/animatedTitle.js"></script>
+  <script src="js/TweenLite.min.js"></script>
+  <script src="js/EasePack.min.js"></script>
+  <script src="js/rAF.js"></script>
+  <script src="js/animation.js"></script>
+  <script src="js/scrollMenu.js"></script>
+  <script src="js/textTransition.js"></script>
+  <script src="lib/lighbox//dist/js/lightbox.min.js"></script>
+  <script>
+    lightbox.option({
+      resizeDuration: 200,
+      wrapAround: true
+    });
+  </script>
 
 </body>
 
